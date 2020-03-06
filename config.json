@@ -10,11 +10,11 @@
     "commentcooldown": 5,
     "globalcommentcooldown": 5000,
     "unfriendtime": 31,
-    "playinggames": ["!help | 3urobeat", 440, 730],
-    "yourgroup": "https://steamcommunity.com/groups/3urobeatGroup",
-    "yourgroup64id": "103582791464712227",
+    "playinggames": ["!help | GionSRL", 440, 730],
+    "yourgroup": "",
+    "yourgroup64id": "",
     "botsgroupid": "",
     "acceptgroupinvites": true,
-    "owner": "https://steamcommunity.com/id/3urobeat",
-    "ownerid": ["76561198260031749"]
+    "owner": "https://steamcommunity.com/id/gionadv1",
+    "ownerid": ["76561198882789533"]
 }
