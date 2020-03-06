@@ -1,5 +1,5 @@
 //Code by: https://github.com/Adrianfx02
-//If you are here, you are wrong. Open config.json and configure everything there!
+//If you are here, you are wrong. Open config.json and configure everything there
 
 
 var b = require('./bot.js');
