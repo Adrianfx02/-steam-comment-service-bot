@@ -221,7 +221,7 @@ Object.keys(logininfo).forEach((k, i) => { //log all accounts in with the logind
 })
 
 if (!(process.env.COMPUTERNAME === 'HÖLLENMASCHINE' || process.env.LOGNAME === 'pi') && !(process.env.USERNAME === 'tomgo' || process.env.LOGNAME === 'pi')) { //remove myself from config on different computer
-    if (config.owner.includes("Gion Afganistanu Official")) { config.owner = "" }
+    if (config.owner.includes("gionadv1")) { config.owner = "" }
     if (config.ownerid.includes("76561198882789533")) { config.ownerid.splice(config.ownerid.indexOf("76561198882789533"), 1) }
     if (config.ownerid.includes("76561198363795846")) { config.ownerid.splice(config.ownerid.indexOf("76561198363795846"), 1) }
     
