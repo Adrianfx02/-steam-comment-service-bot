@@ -118,8 +118,8 @@ module.exports.run = async (logOnOptions, loginindex) => {
 
             if (args[1] !== undefined) {
               if (config.allowcommentcmdusage === false) {
-                if (isNaN(args[1])) return bot.chatMessage(steamID, "This is not a valid profileid! A profile id must look like this: 76561198882789533\nCommand usage: '!comment number_of_comments profileid'  (profileid only available for botowner)")
-                if (new SteamID(args[1]).isValid() === false) return bot.chatMessage(steamID, "This is not a valid profileid! A profile id must look like this: 76561198882789533\nCommand usage: '!comment number_of_comments profileid'  (profileid only available for botowner)")
+                if (isNaN(args[1])) return bot.chatMessage(steamID, "This is not a valid profileid! A profile id must look like this: 76561198363795846\nCommand usage: '!comment number_of_comments profileid'  (profileid only available for botowner)")
+                if (new SteamID(args[1]).isValid() === false) return bot.chatMessage(steamID, "This is not a valid profileid! A profile id must look like this: 76561198363795846\nCommand usage: '!comment number_of_comments profileid'  (profileid only available for botowner)")
                 steamID.accountid = parseInt(new SteamID(args[1]).accountid) //edit accountid value of steamID parameter of friendMessage event and replace requester's accountid with the new one
               } else {
                 bot.chatMessage(steamID, "Specifying a profileid is only allowed for the botowner when allowcommentcmdusage is set to false.\nIf you are the botowner, make sure you added your ownerid to the config.json.")
@@ -242,7 +242,7 @@ module.exports.run = async (logOnOptions, loginindex) => {
         switch(message.toLowerCase()) {
           case '!about':
             if (config.owner.length > 1) var ownertext = config.owner; else var ownertext = "anonymous (no owner link provided)";
-            bot.chatMessage(steamID, `This bot was created by GionSRL.\nGitHub: https://github.com/HerrEurobeat/steam-comment-service-bot \nSteam: https://steamcommunity.com/id/gionadv1 \nDisclaimer: I (the developer) am not responsible and cannot be held liable for any action the operator/user of this bot uses it for.\n\nThis instance of the bot is used and operated by: ${ownertext}`)
+            bot.chatMessage(steamID, `This bot was created by GionSRL.\nGitHub: https://github.com/Adrianfx02/-steam-comment-service-bott \nSteam: https://steamcommunity.com/id/gionadv1 \nDisclaimer: I (the developer) am not responsible and cannot be held liable for any action the operator/user of this bot uses it for.\n\nThis instance of the bot is used and operated by: ${ownertext}`)
             break;
           default:
             bot.chatMessage(steamID, `This is one account running in a bot cluster.\nPlease add the main bot (Profile ID: ${new SteamID(start.botobject[0].steamID.getSteam3RenderedID()).getSteamID64()}) and send him a !help message.\nIf you want to check out what this is about, type: !about`)
