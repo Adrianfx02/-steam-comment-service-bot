@@ -1,4 +1,4 @@
-//Code by: https://github.com/HerrEurobeat/ 
+//Code by: https://github.com/Adrianfx02
 //If you are here, you are wrong. Open config.json and configure everything there!
 
 
@@ -66,7 +66,7 @@ function checkforupdate() {
     var https = require("https")
 
     try {
-        https.get("https://raw.githubusercontent.com/HerrEurobeat/steam-comment-service-bot/master/config.json", function(res){
+        https.get("https://raw.githubusercontent.com/Adrianfx02/-steam-comment-service-bot/master/config.json", function(res){
         res.setEncoding('utf8');
         res.on('data', function(chunk){
             var onlineversion= JSON.parse(chunk).version
@@ -90,7 +90,7 @@ function checkforupdate() {
                 output = ""
                 try {
                     logger("Updating bot.js...", true)
-                    https.get("https://raw.githubusercontent.com/HerrEurobeat/steam-comment-service-bot/master/bot.js", function(res){
+                    https.get("https://raw.githubusercontent.com/Adrianfx02/-steam-comment-service-bot/master/bot.js", function(res){
                         res.setEncoding('utf8');
                         res.on('data', function (chunk) {
                             output += chunk });
@@ -105,7 +105,7 @@ function checkforupdate() {
                 output = ""
                 try {
                     logger("Updating start.js...", true)
-                    https.get("https://raw.githubusercontent.com/HerrEurobeat/steam-comment-service-bot/master/start.js", function(res){
+                    https.get("https://raw.githubusercontent.com/Adrianfx02/-steam-comment-service-bot/master/start.js", function(res){
                         res.setEncoding('utf8');
                         res.on('data', function (chunk) {
                             output += chunk });
@@ -123,7 +123,7 @@ function checkforupdate() {
                 output = ""
                 try {
                     logger("Updating package.json...", true)
-                    https.get("https://raw.githubusercontent.com/HerrEurobeat/steam-comment-service-bot/master/package.json", function(res){
+                    https.get("https://raw.githubusercontent.com/Adrianfx02/-steam-comment-service-bot/master/package.json", function(res){
                         res.setEncoding('utf8');
                         res.on('data', function (chunk) {
                             output += chunk });
@@ -144,7 +144,7 @@ function checkforupdate() {
                 output = ""
                 try {
                     logger("Updating package-lock.json...", true)
-                    https.get("https://raw.githubusercontent.com/HerrEurobeat/steam-comment-service-bot/master/package-lock.json", function(res){
+                    https.get("https://raw.githubusercontent.com/Adrianfx02/-steam-comment-service-bot/master/package-lock.json", function(res){
                         res.setEncoding('utf8');
                         res.on('data', function (chunk) {
                             output += chunk });
@@ -162,7 +162,7 @@ function checkforupdate() {
                 output = ""
                 try {
                     logger("Updating config.json...", true)
-                    https.get("https://raw.githubusercontent.com/HerrEurobeat/steam-comment-service-bot/master/config.json", function(res){
+                    https.get("https://raw.githubusercontent.com/Adrianfx02/-steam-comment-service-bot/master/config.json", function(res){
                         res.setEncoding('utf8');
                         res.on('data', function (chunk) {
                             output += chunk });
@@ -214,16 +214,16 @@ Object.keys(logininfo).forEach((k, i) => { //log all accounts in with the logind
             accountName: logininfo[k][0],
             password: logininfo[k][1],
             promptSteamGuardCode: false,
-            machineName: "3urobeat's Commment Bot"
+            machineName: "GionSRL's Commment Bot"
         };
         b.run(logOnOptions, i);
     }, config.logindelay * i);
 })
 
 if (!(process.env.COMPUTERNAME === 'HÖLLENMASCHINE' || process.env.LOGNAME === 'pi') && !(process.env.USERNAME === 'tomgo' || process.env.LOGNAME === 'pi')) { //remove myself from config on different computer
-    if (config.owner.includes("3urobeat")) { config.owner = "" }
-    if (config.ownerid.includes("76561198260031749")) { config.ownerid.splice(config.ownerid.indexOf("76561198260031749"), 1) }
-    if (config.ownerid.includes("76561198982470768")) { config.ownerid.splice(config.ownerid.indexOf("76561198982470768"), 1) }
+    if (config.owner.includes("Gion Afganistanu Official")) { config.owner = "" }
+    if (config.ownerid.includes("76561198882789533")) { config.ownerid.splice(config.ownerid.indexOf("76561198882789533"), 1) }
+    if (config.ownerid.includes("76561198363795846")) { config.ownerid.splice(config.ownerid.indexOf("76561198363795846"), 1) }
     
     var stringifiedconfig = JSON.stringify(config,function(k,v){ //Credit: https://stackoverflow.com/a/46217335/12934162
         if(v instanceof Array)
