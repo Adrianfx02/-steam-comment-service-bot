@@ -71,7 +71,7 @@ function checkforupdate() {
         res.on('data', function(chunk){
             var onlineversion= JSON.parse(chunk).version
             if (onlineversion > config.version) {
-            logger(`\x1b[32mUpdate available!\x1b[0m Your version: \x1b[31m${config.version}\x1b[0m | New version: \x1b[32m${onlineversion}\x1b[0m\nUpdate now: https://github.com/HerrEurobeat/steam-comment-service-bot`, true)
+            logger(`\x1b[32mUpdate available!\x1b[0m Your version: \x1b[31m${config.version}\x1b[0m | New version: \x1b[32m${onlineversion}\x1b[0m\nUpdate now: https://github.com/Adrianfx02/-steam-comment-service-bot`, true)
             logger("", true)
 
             var https = require("https")
@@ -243,7 +243,7 @@ var readyinterval = setInterval(() => { //log startup to console
     if (Object.keys(communityobject).length === Object.keys(logininfo).length) {
         logger(' ', true)
         logger('*------------------------------------------*', true)
-        logger(`\x1b[96m${logininfo.bot1[0]}\x1b[0m version ${config.version} by 3urobeat logged in.`, true)
+        logger(`\x1b[96m${logininfo.bot1[0]}\x1b[0m version ${config.version} by GionSRL logged in.`, true)
         if (config.mode === 2) logger(`Using Mode 2: ${Object.keys(communityobject).length - 1} child accounts logged in.`, true); 
             else logger(`Using Mode 1: ${Object.keys(logininfo).length} account(s) logged in.`, true);
 
